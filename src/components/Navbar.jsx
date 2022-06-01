@@ -48,9 +48,9 @@ const NavBar = () => {
     const handleActiveMenu = () => setActiveMenu(!activeMenu);
  
   return (
-    <div className='flex justify-between p-2 md:mx-6 relative'>
+    <div className='flex justify-between p-2 md:ml-6 relative'>
 
-      <NavButton title='Menu' customFunc={handleActiveMenu} color={currentColor} icon={<AiOutlineMenu/>} />
+      <NavButton title='Menu' customFunc={handleActiveMenu} color={currentColor} icon={!activeMenu && <AiOutlineMenu/>} />
       
       <div className='flex'>
         <NavButton title='Cart' customFunc={() => handleClick('cart')} color={currentColor} icon={<FiShoppingCart/>} />
